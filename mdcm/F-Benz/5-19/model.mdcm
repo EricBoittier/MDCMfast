@@ -1,0 +1,60 @@
+1          ! no. residue types defined here
+
+ACE       ! residue name
+9          ! no. axis system frames
+ 1  7  6 BO  ! atom indices involved in frame  1
+2  0          ! no. chgs and polarizable sites for atom  1
+      0.0145675427       0.0000000000      -0.1292216301       0.0509151146
+     -0.0035711487       0.0000000000       0.0034387165      -0.2335769534
+2  0          ! no. chgs and polarizable sites for atom  7
+      0.1322704744       0.0000000000       0.0724334567       0.0868307874
+      0.0062432411       0.0000000000       0.0034191585       0.1056807265
+2  0          ! no. chgs and polarizable sites for atom  6
+     -0.0000003773       0.0000000000       0.0761047083       0.0408312604
+      0.0000003580       0.0000000000       0.1288519579      -0.1783688068
+ 5  7  6 BO  ! atom indices involved in frame  1
+2  0          ! no. chgs and polarizable sites for atom  5
+      0.0145641040       0.0000000000      -0.1292244042       0.0509157106
+     -0.0035709500       0.0000000000       0.0034391110      -0.2335770726
+0  0          ! no. chgs and polarizable sites for atom  7
+0  0          ! no. chgs and polarizable sites for atom  6
+ 1  2  10 BO  ! atom indices involved in frame  1
+0  0          ! no. chgs and polarizable sites for atom  1
+2  0          ! no. chgs and polarizable sites for atom  2
+      0.0338132522       0.0000000000      -0.0416883070       0.0749478415
+     -0.0047999431       0.0000000000       0.0065724383      -0.1974980682
+2  0          ! no. chgs and polarizable sites for atom  10
+     -0.0265535272       0.0000000000       0.0153946961       0.0745570287
+     -0.0000697256       0.0000000000       0.0000401951      -0.2090846151
+ 2  10  3 BO  ! atom indices involved in frame  1
+0  0          ! no. chgs and polarizable sites for atom  2
+0  0          ! no. chgs and polarizable sites for atom  10
+2  0          ! no. chgs and polarizable sites for atom  3
+     -0.0530864518       0.0000000000       0.0079501914       0.0749478862
+      0.0080995533       0.0000000000      -0.0007965503      -0.1974976957
+ 1  2  4 BO  ! atom indices involved in frame  1
+0  0          ! no. chgs and polarizable sites for atom  1
+0  0          ! no. chgs and polarizable sites for atom  2
+1  0          ! no. chgs and polarizable sites for atom  4
+      0.0031351076       0.0000000000       0.0554172611       0.1330568939
+ 2  10  8 BO  ! atom indices involved in frame  1
+0  0          ! no. chgs and polarizable sites for atom  2
+0  0          ! no. chgs and polarizable sites for atom  10
+1  0          ! no. chgs and polarizable sites for atom  8
+      0.0000001950       0.0000000000       0.0548802485       0.1325557232
+ 2  1  9 BO  ! atom indices involved in frame  1
+0  0          ! no. chgs and polarizable sites for atom  2
+0  0          ! no. chgs and polarizable sites for atom  1
+1  0          ! no. chgs and polarizable sites for atom  9
+     -0.0322391308       0.0000000000       0.0693270246       0.1456534863
+ 3  5  11 BO  ! atom indices involved in frame  1
+0  0          ! no. chgs and polarizable sites for atom  3
+0  0          ! no. chgs and polarizable sites for atom  5
+1  0          ! no. chgs and polarizable sites for atom  11
+     -0.0322391350       0.0000000000       0.0693266887       0.1456537545
+ 5  3  12 BO  ! atom indices involved in frame  1
+0  0          ! no. chgs and polarizable sites for atom  5
+0  0          ! no. chgs and polarizable sites for atom  3
+1  0          ! no. chgs and polarizable sites for atom  12
+      0.0031362759       0.0000000000       0.0554169895       0.1330571771
+

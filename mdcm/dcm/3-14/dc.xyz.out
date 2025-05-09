@@ -1,0 +1,32 @@
+Running in generate mode
+
+Reading "/pchem-data/meuwly/boittier/home/dcm/esp-dcm.cube"...
+
+  DCM Potential
+  Electrostatic potential from Total SCF Density
+    5  -10.929346   -8.550108   -8.140940
+   67    0.333333    0.000000    0.000000
+   51    0.000000    0.333333    0.000000
+   50    0.000000    0.000000    0.333333
+    6    6.000000   -0.000026    1.450937   -0.000000
+    1    1.000000   -0.000007    2.602975    1.712988
+    1    1.000000   -0.000008    2.602975   -1.712988
+   17   17.000000   -2.788406   -0.409167    0.000000
+   17   17.000000    2.788416   -0.409160   -0.000000
+ -1.82327E-03 -1.81416E-03 -1.81493E-03 -1.82550E-03 -1.87256E-03 -1.85710E-03
+       .            .            .            .            .            .
+       .            .            .            .            .            .
+       .            .            .            .            .            .
+ -1.97810E-03 -1.99550E-03 -2.00381E-03 -2.00312E-03 -1.99341E-03 -1.97460E-03
+
+55242 out of 170850 gridpoints are considered ( 32.3%).
+
+...done!
+
+ Read dc.xyz
+          14  charges
+ Total charge:    5.9600000046344803E-008
+
+ writing cube file 14charges.cube
+
+Written cubefile and slice data

@@ -1,0 +1,28 @@
+1          ! no. residue types defined here
+
+ACE       ! residue name
+3          ! no. axis system frames
+ 4  1  5 BO  ! atom indices involved in frame  1
+3  0          ! no. chgs and polarizable sites for atom  4
+     -0.0475420032       0.0000000295      -0.0244492075       0.1682238579
+     -0.0211002027      -0.0000000177      -0.0333580474       0.0069169700
+      0.0004214938      -0.0000000152      -0.0170711770      -0.2561352253
+3  0          ! no. chgs and polarizable sites for atom  1
+     -0.3423717228      -0.0000000004       0.2284004313      -1.0448745489
+      0.2697631978      -0.0000000011      -0.1799612085      -1.3286782503
+     -0.0182834098       0.0000000114       0.0121870078       1.6527482271
+3  0          ! no. chgs and polarizable sites for atom  5
+      0.0475432890      -0.0000000053      -0.0244512167       0.1682331860
+      0.0210985728       0.0000000120      -0.0333651953       0.0068969876
+     -0.0004203221       0.0000000034      -0.0170726023      -0.2561331987
+ 2  1  4 BO  ! atom indices involved in frame  1
+1  0          ! no. chgs and polarizable sites for atom  2
+     -0.0257767306       0.0465649742       0.0689335898       0.4414011538
+0  0          ! no. chgs and polarizable sites for atom  1
+0  0          ! no. chgs and polarizable sites for atom  4
+ 3  1  4 BO  ! atom indices involved in frame  1
+1  0          ! no. chgs and polarizable sites for atom  3
+     -0.0257767128      -0.0465649080       0.0689334909       0.4414010942
+0  0          ! no. chgs and polarizable sites for atom  1
+0  0          ! no. chgs and polarizable sites for atom  4
+

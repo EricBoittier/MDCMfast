@@ -1,0 +1,7 @@
+setup.py
+mdcm_fast/__init__.py
+mdcm_fast/cubes.py
+mdcm_fast.egg-info/PKG-INFO
+mdcm_fast.egg-info/SOURCES.txt
+mdcm_fast.egg-info/dependency_links.txt
+mdcm_fast.egg-info/top_level.txt
