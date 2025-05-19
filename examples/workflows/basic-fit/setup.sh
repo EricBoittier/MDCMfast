@@ -6,7 +6,7 @@ MDCMFAST_DIR="/home/boittier/Documents/github/MDCMfast"
 
 
 # Create the directory structure for results
-for X in 1-mtp-fit 2-fit-atoms 3-fit-molecule 4-analysis charmm; do
+for X in 1-mtp-fit 2-fit-atoms 3-fit-molecule 4-analysis charmm refine; do
     echo "Creating directory: $MDCMFAST_DIR/results/h2o/$X"
     mkdir "$MDCMFAST_DIR/results/h2o/$X"
 done

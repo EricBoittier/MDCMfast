@@ -1,0 +1,30 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: pc-mm025
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                      count
+---------------------  -------
+all                          1
+fit_atomic_mdcm             10
+fit_molecular_mdcm          10
+generate_charmm_files       10
+refine_model                10
+total                       41
+
+Select jobs to execute...
+Execute 10 jobs...
+RuleException in rule fit_atomic_mdcm in file "/home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/Snakefile", line 87:
+NameError: The name 'q' is unknown in this context. Did you mean 'wildcards.q'?, when formatting the following:
+
+        mkdir -p 2-fit-atoms
+        
+        {PCUBEFIT} -greedy -mtpfile {input.mtpl}                    -esp {input.pot_cube} -dens {input.dens_cube}                    -nacmin 1 -nacmax {params.nacmax}                    -atom {wildcards.atom_num} -ntry {params.ntry}                    -onlymultipoles -v > {output.log}
+        
+        # Move output files to correct location
+        mv multipole{atom_num}_{q}charges.xyz {output.xyz}
+        mv multipole{atom_num}_{q}charges-fit.log {output.log}
+        

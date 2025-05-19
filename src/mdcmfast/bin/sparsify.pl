@@ -12,7 +12,7 @@ my $n1;
 my $n2;
 my $n3;
 
-my $sk=3; # take every skth point
+my $sk=2; # take every skth point
 
 my @pots;
 my @sparse;

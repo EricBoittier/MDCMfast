@@ -1,0 +1,19 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: pc-mm025
+Building DAG of jobs...
+MissingInputException in rule fit_molecular_mdcm in file "/home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/Snakefile", line 114:
+Missing input files for rule fit_molecular_mdcm:
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_3charges.log
+    wildcards: n_charges=3
+    affected files:
+        /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_12charges.xyz
+        /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_6charges.xyz
+        /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_9charges.xyz
+        /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_5charges.xyz
+        /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_7charges.xyz
+        /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_10charges.xyz
+        /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_11charges.xyz
+        /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_8charges.xyz
+        /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_4charges.xyz
+        /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_3charges.xyz

@@ -9,14 +9,14 @@ configfile: "config.yaml"
 MTPFIT = f"{INSTALL_DIR}/src/mdcmfast/bin/mtpfit.py"
 PCUBEFIT = f"{INSTALL_DIR}/src/mdcmfast/bin/pcubefit.x"
 COMB_XYZ_TO_DCM = f"{INSTALL_DIR}/src/mdcmfast/bin/comb-xyz-to-dcm.pl"
+CULL_CUBES = f"{INSTALL_DIR}/src/mdcmfast/bin/sparsify.pl"
 
 name = config["name"]
-charges =  determine_n_charges(config["min_molecular_charges"], config["max_molecular_charges"])
 atom_num = range(1, config["n_atoms"] + 1)
-print(f"Charges to fit: {charges}")
-n_charges = range(config["min_molecular_charges"], config["max_molecular_charges"] + 1)
+n_charges = range(config["n_atoms"], config["max_charges_per_atom"] + 1)
 print(f"Charges per atom: {n_charges}")
-print(f"Atoms: {atom_num}")
+n_charges_model = range(config["min_molecular_charges"], config["max_molecular_charges"] + 1)
+print(f"Charges model: {n_charges_model}")
 
 config["n_charges"] = n_charges
 config["atom_num"] = atom_num
@@ -25,16 +25,31 @@ config["atom_num"] = atom_num
 # Default target rule
 rule all:
     input:
-        expand(f"{INSTALL_DIR}/results/{{name}}/charmm/{{name}}_{{n_charges}}charges.dcm",
+        expand(f"{INSTALL_DIR}/results/{{name}}/4-refined/{{name}}_{{n_charges_model}}charges_refined.xyz",
                name=config["name"],
-               n_charges=range(config["min_molecular_charges"], 
-                             config["max_molecular_charges"] + 1))
+               n_charges_model=range(config["min_molecular_charges"], 
+                                   config["max_molecular_charges"] + 1))
+
+
+# 1. Fit atomic multipoles to reference ESP
+rule cull_cubes:
+    input:
+        pot_cube = config["ref_dir"] + "/{0}-pot.cube".format(config["name"]),
+        dens_cube = config["ref_dir"] + "/{0}-dens.cube".format(config["name"])
+    output:
+        pot_cube = config["ref_dir"] + "/{0}-pot_culled.cube".format(config["name"]),
+        dens_cube = config["ref_dir"] + "/{0}-dens_culled.cube".format(config["name"])
+    shell:
+        """
+        {CULL_CUBES} {input.pot_cube} > {output.pot_cube}
+        {CULL_CUBES} {input.dens_cube} > {output.dens_cube}
+        """
 
 # 1. Fit atomic multipoles to reference ESP
 rule fit_multipoles:
     input:
-        pot_cube = config["ref_dir"] + "/{0}-pot.cube".format(config["name"]),
-        dens_cube = config["ref_dir"] + "/{0}-dens.cube".format(config["name"])
+        pot_cube = config["ref_dir"] + "/{0}-pot_culled.cube".format(config["name"]),
+        dens_cube = config["ref_dir"] + "/{0}-dens_culled.cube".format(config["name"])
     output:
         mtpl = f"{INSTALL_DIR}/results/{config['name']}/1-mtp-fit/fitted-mtpl.dat"
     params:
@@ -43,8 +58,10 @@ rule fit_multipoles:
         name = config["name"]
     shell:
         """
+        mkdir -p $(dirname "{output.mtpl}")
+
         {MTPFIT} -pot {input.pot_cube} -dens {input.dens_cube} \
-                  -lmax {params.lmax} -qtot {params.qtot}
+                  -lmax {params.lmax} -qtot {params.qtot} > {output.mtpl}.log
         echo "Fitted multipoles saved to {output.mtpl}"
         cp fitted-mtpl.dat {INSTALL_DIR}/results/{params.name}/1-mtp-fit/fitted-mtpl.dat
         """
@@ -52,14 +69,16 @@ rule fit_multipoles:
 # 2. Generate and analyze cube file from fitted multipoles
 rule analyze_multipoles:
     input:
-        pot_cube = config["ref_dir"] + "/{0}-pot.cube".format(config["name"]),
-        dens_cube = config["ref_dir"] + "/{0}-dens.cube".format(config["name"]),
+        pot_cube = config["ref_dir"] + "/{0}-pot_culled.cube".format(config["name"]),
+        dens_cube = config["ref_dir"] + "/{0}-dens_culled.cube".format(config["name"]),
         mtpl = f"{INSTALL_DIR}/results/{config['name']}/1-mtp-fit/fitted-mtpl.dat"
     output:
         cube = f"{INSTALL_DIR}/results/{config['name']}/1-mtp-fit/ditriantapole_expansion.cube",
         log = f"{INSTALL_DIR}/results/{config['name']}/1-mtp-fit/analyze-cube.log"
     shell:
         """
+        mkdir -p $(dirname "{output.cube}")
+
         # Generate cube from fitted multipoles
         {PCUBEFIT} -v -generate -multipole -esp {input.pot_cube} \
                    -dens {input.dens_cube} -mtpfile {input.mtpl}
@@ -76,20 +95,23 @@ rule fit_atomic_mdcm:
         dens_cube = config["ref_dir"] + "/{0}-dens.cube".format(config["name"]),
         mtpl = f"{INSTALL_DIR}/results/{config['name']}/1-mtp-fit/fitted-mtpl.dat"
     output:
-        xyz = f"{INSTALL_DIR}/results/{config['name']}/2-fit-atoms/multipole{{atom_num}}_{{atom_num}}charges.xyz",
-        log = f"{INSTALL_DIR}/results/{config['name']}/2-fit-atoms/multipole{{atom_num}}_{{atom_num}}charges-fit.log"
+        xyz = f"{INSTALL_DIR}/results/{config['name']}/2-fit-atoms/multipole_atom{{atom_num}}_{{n_charges}}charges.xyz",
+        log = f"{INSTALL_DIR}/results/{config['name']}/2-fit-atoms/multipole_atom{{atom_num}}_{{n_charges}}charges-fit.log"
     params:
-        max_charges = config["max_charges_per_atom"],
         ntry = config["ntry"]
     shell:
         """
-        mkdir -p $(dirname {output.xyz})
+        mkdir -p $(dirname "{output.xyz}")
         
         {PCUBEFIT} -greedy -mtpfile {input.mtpl} \
                    -esp {input.pot_cube} -dens {input.dens_cube} \
-                   -nacmin 1 -nacmax {params.max_charges} \
+                   -nacmin {wildcards.n_charges} -nacmax {wildcards.n_charges} \
                    -atom {wildcards.atom_num} -ntry {params.ntry} \
                    -onlymultipoles -v > {output.log}
+        
+        # Move output files to correct location
+        mv "multipole{wildcards.atom_num}_{wildcards.n_charges}charges.xyz" "{output.xyz}"
+
         """
 
 # 4. Fit molecular MDCM model
@@ -98,28 +120,57 @@ rule fit_molecular_mdcm:
         pot_cube = config["ref_dir"] + "/{0}-pot.cube".format(config["name"]),
         dens_cube = config["ref_dir"] + "/{0}-dens.cube".format(config["name"]),
         mtpl = f"{INSTALL_DIR}/results/{config['name']}/1-mtp-fit/fitted-mtpl.dat",
-        atom_fits = expand(f"{INSTALL_DIR}/results/{config['name']}/2-fit-atoms/multipole{{atom_num}}_{{atom_num}}charges.xyz",
-                         atom_num=config["atom_num"])
+        atom_fits = expand(f"{INSTALL_DIR}/results/{config['name']}/2-fit-atoms/multipole_atom{{atom_num}}_{{n_charges}}charges.xyz",
+                         atom_num=range(1, config["n_atoms"] + 1),
+                         n_charges=config["n_charges"])
     output:
-        xyz = f"{INSTALL_DIR}/results/{config['name']}/3-fit-molecule/{config['name']}_{{n_charges}}charges.xyz",
-        log = f"{INSTALL_DIR}/results/{config['name']}/3-fit-molecule/{config['name']}_{{n_charges}}charges.log"
+        xyz = f"{INSTALL_DIR}/results/{config['name']}/3-fit-molecule/{config['name']}_{{n_charges_model}}charges.xyz",
+        log = f"{INSTALL_DIR}/results/{config['name']}/3-fit-molecule/{config['name']}_{{n_charges_model}}charges.log"
     params:
         ntry = config["ntry"],
-        max_atom_charges = config["max_charges_per_atom"]
+        nacmax = config["max_charges_per_atom"]
+    shell:
+        """
+        mkdir -p $(dirname "{output.xyz}")
+        
+        {PCUBEFIT} -greedy -esp {input.pot_cube} -dens {input.dens_cube} \
+                   -mtpfile {input.mtpl} -ncmin {wildcards.n_charges_model} \
+                   -ncmax {wildcards.n_charges_model} -nacmax {params.nacmax} \
+                   -ntry {params.ntry} -v > {output.log}
+
+        # Move output files to correct location
+        mv "{wildcards.n_charges_model}charges.xyz" "{output.xyz}"
+        """
+
+# 5. Refine model with simplex
+rule refine_model:
+    input:
+        xyz = f"{INSTALL_DIR}/results/{config['name']}/3-fit-molecule/{config['name']}_{{n_charges_model}}charges.xyz",
+        pot_cube = config["ref_dir"] + "/{0}-pot.cube".format(config["name"]),
+        dens_cube = config["ref_dir"] + "/{0}-dens.cube".format(config["name"]),
+        mtpl = f"{INSTALL_DIR}/results/{config['name']}/1-mtp-fit/fitted-mtpl.dat"
+    output:
+        xyz = f"{INSTALL_DIR}/results/{config['name']}/4-refined/{config['name']}_{{n_charges_model}}charges_refined.xyz",
+        log = f"{INSTALL_DIR}/results/{config['name']}/4-refined/{config['name']}_{{n_charges_model}}charges_refined.log"
+    params:
+        ntry = config["ntry"],
+        nacmax = config["max_charges_per_atom"]
     shell:
         """
         mkdir -p $(dirname {output.xyz})
         
-        {PCUBEFIT} -greedy -esp {input.pot_cube} -dens {input.dens_cube} \
-                   -mtpfile {input.mtpl} -ncmin {wildcards.n_charges} \
-                   -ncmax {wildcards.n_charges} -nacmax {params.max_atom_charges} \
-                   -ntry {params.ntry} -v > {output.log}
+        {PCUBEFIT} -xyz {input.xyz} -mtpfile {input.mtpl} -simplex \
+                   -esp {input.pot_cube} -dens {input.dens_cube} \
+                   -nacmax {params.nacmax} -ntry {params.ntry} -v > {output.log}
+        
+        # Move refined output to correct location
+        mv refined.xyz {output.xyz}
         """
 
-# 5. Analyze final model
+# 6. Analyze final model
 rule analyze_model:
     input:
-        xyz = f"{INSTALL_DIR}/results/{config['name']}/3-fit-molecule/{config['name']}_{{n_charges}}charges.xyz",
+        xyz = f"{INSTALL_DIR}/results/{config['name']}/3-fit-molecule/{config['name']}_{{n_charges}}charges_refined.xyz",
         pot_cube = config["ref_dir"] + "/{0}-pot.cube".format(config["name"]),
         dens_cube = config["ref_dir"] + "/{0}-dens.cube".format(config["name"])
     output:
@@ -127,6 +178,8 @@ rule analyze_model:
         log = f"{INSTALL_DIR}/results/{config['name']}/4-analysis/{config['name']}_{{n_charges}}charges.log"
     shell:
         """
+        mkdir -p $(dirname {output.cube})
+
         # Generate cube from charge model
         {PCUBEFIT} -generate -xyz {input.xyz} -esp {input.pot_cube} \
                    -dens {input.dens_cube} -v
@@ -136,13 +189,16 @@ rule analyze_model:
                    -esp2 {output.cube} -dens {input.dens_cube} > {output.log}
         """
 
-# 6. Generate CHARMM files
+# 7. Generate CHARMM files
 rule generate_charmm_files:
     input:
-        xyz = f"{INSTALL_DIR}/results/{config['name']}/3-fit-molecule/{config['name']}_{{n_charges}}charges.xyz",
+        xyz = f"{INSTALL_DIR}/results/{config['name']}/4-refined/{config['name']}_{{n_charges}}charges_refined.xyz",
         dens_cube = config["ref_dir"] + "/{0}-dens.cube".format(config["name"]),
         frames = "frames.txt"
     output:
         dcm = f"{INSTALL_DIR}/results/{config['name']}/charmm/{config['name']}_{{n_charges}}charges.dcm"
     shell:
-        "{COMB_XYZ_TO_DCM} {input.xyz} {input.dens_cube} {input.frames} {output.dcm}" 
+        """ 
+        mkdir -p $(dirname {output.dcm})
+        {COMB_XYZ_TO_DCM} {input.xyz} {input.dens_cube} {input.frames} {output.dcm}
+        """

@@ -1,0 +1,10 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: pc-mm025
+Building DAG of jobs...
+MissingInputException in rule refine_model in file "/home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/Snakefile", line 138:
+Missing input files for rule refine_model:
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/4-refined/h2o_3charges_refined.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/4-refined/h2o_3charges_refined.log
+    wildcards: n_charges=3
+    affected files:
+        /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_3charges_refined.xyz

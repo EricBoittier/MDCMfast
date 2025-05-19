@@ -1,0 +1,117 @@
+Running in fitting mode
+
+Reading "/home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube"...
+
+  job Potential
+  Electrostatic potential from Total SCF Density
+    3   -4.970736   -4.970736   -4.746947
+   40    0.249999    0.000000    0.000000
+   40    0.000000    0.249999    0.000000
+   40    0.000000    0.000000    0.249999
+    8    8.000000    0.000000    0.000000    0.223789
+    1    1.000000    0.000000    1.435292   -0.895158
+    1    1.000000    0.000000   -1.435292   -0.895158
+  9.33696E-04  6.32747E-05 -8.20507E-04 -1.70423E-03 -2.57447E-03 -3.41834E-03
+       .            .            .            .            .            .
+       .            .            .            .            .            .
+       .            .            .            .            .            .
+ -8.27319E-05 -9.59561E-04 -1.82824E-03 -2.67583E-03 -3.49031E-03 -4.26103E-03
+
+41856 out of 64000 gridpoints are considered ( 65.4%).
+
+...done!
+
+
+
+
+USING GREEDY MODE
+Running DE in parallel with 1 thread(s)!
+
+Starting fitting procedure for multipole expansion of atom 1 with 4 charges, trial 1
+gen      0/8000      elitist  3.2234046E-03 feasible? T
+gen    100/8000      elitist  1.7033729E-03 feasible? T
+gen    200/8000      elitist  1.1518296E-03 feasible? T
+gen    300/8000      elitist  8.8582166E-04 feasible? T
+gen    400/8000      elitist  6.9939152E-04 feasible? T
+gen    500/8000      elitist  6.5549025E-04 feasible? T
+gen    600/8000      elitist  6.3708258E-04 feasible? T
+gen    700/8000      elitist  6.2256085E-04 feasible? T
+gen    800/8000      elitist  6.0701996E-04 feasible? T
+gen    900/8000      elitist  6.0144825E-04 feasible? T
+gen   1000/8000      elitist  6.0055509E-04 feasible? T
+gen   1100/8000      elitist  5.9765816E-04 feasible? T
+gen   1200/8000      elitist  5.9690122E-04 feasible? T
+gen   1300/8000      elitist  5.9679775E-04 feasible? T
+gen   1400/8000      elitist  5.9642930E-04 feasible? T
+gen   1500/8000      elitist  5.9593947E-04 feasible? T
+gen   1600/8000      elitist  5.9552737E-04 feasible? T
+gen   1700/8000      elitist  5.9480371E-04 feasible? T
+gen   1800/8000      elitist  5.9465470E-04 feasible? T
+gen   1900/8000      elitist  5.9461286E-04 feasible? T
+gen   2000/8000      elitist  5.9457360E-04 feasible? T
+gen   2100/8000      elitist  5.9450136E-04 feasible? T
+gen   2200/8000      elitist  5.9431414E-04 feasible? T
+gen   2300/8000      elitist  5.9426212E-04 feasible? T
+gen   2400/8000      elitist  5.9422269E-04 feasible? T
+gen   2500/8000      elitist  5.9406001E-04 feasible? T
+gen   2600/8000      elitist  5.9398989E-04 feasible? T
+gen   2700/8000      elitist  5.9395112E-04 feasible? T
+gen   2800/8000      elitist  5.9393829E-04 feasible? T
+gen   2900/8000      elitist  5.9392976E-04 feasible? T
+population converged towards a single solution after 2935 generations.
+Starting local simplex optimization:
+Solution before refinement:      5.9392829586E-04
+ performing expansion, best =    5.9391653716946440E-004
+ performing expansion, best =    5.9391579693044057E-004
+ performing expansion, best =    5.9391128111027430E-004
+ performing expansion, best =    5.9391105715480392E-004
+ performing expansion, best =    5.9390105920009532E-004
+ performing expansion, best =    5.9390074560446257E-004
+ performing expansion, best =    5.9389869269772116E-004
+ performing expansion, best =    5.9389666916116388E-004
+ performing expansion, best =    5.9389549844302686E-004
+ performing expansion, best =    5.9389312880805370E-004
+ performing expansion, best =    5.9389224287773143E-004
+ performing expansion, best =    5.9388795319211636E-004
+ performing expansion, best =    5.9388700082991304E-004
+ performing expansion, best =    5.9388494538033557E-004
+ performing expansion, best =    5.9388361256712877E-004
+ performing expansion, best =    5.9388244804127206E-004
+ performing expansion, best =    5.9388220412109221E-004
+ performing expansion, best =    5.9388187723409275E-004
+ performing expansion, best =    5.9388163303080452E-004
+ performing expansion, best =    5.9388107107821025E-004
+ performing expansion, best =    5.9388079312824220E-004
+ performing expansion, best =    5.9387935899384589E-004
+ performing expansion, best =    5.9387848470617867E-004
+ performing expansion, best =    5.9387829792376839E-004
+ performing expansion, best =    5.9387790051728209E-004
+ performing expansion, best =    5.9387745459295749E-004
+ performing expansion, best =    5.9387680624752471E-004
+ performing expansion, best =    5.9387672338088711E-004
+ performing expansion, best =    5.9387657023095015E-004
+ performing expansion, best =    5.9387635917484581E-004
+ performing expansion, best =    5.9387541988101071E-004
+ performing expansion, best =    5.9387526167273730E-004
+ performing expansion, best =    5.9387484621403720E-004
+ performing expansion, best =    5.9387479794454766E-004
+ performing expansion, best =    5.9387462424636216E-004
+ performing expansion, best =    5.9387385410692123E-004
+ performing expansion, best =    5.9387383826859318E-004
+ performing expansion, best =    5.9387358947997468E-004
+Exiting simplex optimization after   459 iterations
+Solution after  refinement:      5.9387358948E-04
+RMSE         5.938735895E-04Hartree
+NEW BEST!
+
+Best found solution for 4 charges:
+        RMSE         3.726610223E-01 kcal/mol
+         MAE         2.633815184E-01 kcal/mol
+     max. AE         2.051144791E+00 kcal/mol
+
+       x[bohr]       y[bohr]       z[bohr]          q[e]
+    -0.0409276    -0.1116759     0.6203364     0.9999989
+     0.9292623    -0.0117025     0.4541491    -0.4089608
+    -0.9527931    -0.0821437     0.1776500    -0.3182687
+    -0.1842045    -0.1556720     1.1503767    -0.5942160
+

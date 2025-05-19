@@ -1,0 +1,56 @@
+Running in fitting mode
+
+Reading "/home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube"...
+
+  job Potential
+  Electrostatic potential from Total SCF Density
+    3   -4.970736   -4.970736   -4.746947
+   40    0.249999    0.000000    0.000000
+   40    0.000000    0.249999    0.000000
+   40    0.000000    0.000000    0.249999
+    8    8.000000    0.000000    0.000000    0.223789
+    1    1.000000    0.000000    1.435292   -0.895158
+    1    1.000000    0.000000   -1.435292   -0.895158
+ -3.70954E-03 -1.67749E-03 -3.19220E-03 -4.74008E-03 -1.17129E-03 -2.61854E-03
+       .            .            .            .            .            .
+       .            .            .            .            .            .
+       .            .            .            .            .            .
+ -3.95028E-03 -5.24364E-03  1.72499E-03  5.68478E-04 -6.37135E-04 -1.87084E-03
+
+17333 out of 64000 gridpoints are considered ( 27.1%).
+
+...done!
+
+
+
+
+USING GREEDY MODE
+Running DE in parallel with 1 thread(s)!
+
+Starting fitting procedure for multipole expansion of atom 2 with 3 charges, trial 1
+gen      0/6000      elitist  5.2912997E-03 feasible? T
+gen    100/6000      elitist  3.4637520E-04 feasible? T
+gen    200/6000      elitist  2.2554976E-04 feasible? T
+gen    300/6000      elitist  2.2053345E-04 feasible? T
+gen    400/6000      elitist  2.1990038E-04 feasible? T
+population converged towards a single solution after 474 generations.
+Starting local simplex optimization:
+Solution before refinement:      2.1988259691E-04
+ performing expansion, best =    2.1988234193645348E-004
+ performing expansion, best =    2.1988220955288155E-004
+ performing expansion, best =    2.1988200894283800E-004
+Exiting simplex optimization after   265 iterations
+Solution after  refinement:      2.1988200894E-04
+RMSE         2.198820089E-04Hartree
+NEW BEST!
+
+Best found solution for 3 charges:
+        RMSE         1.379779395E-01 kcal/mol
+         MAE         9.169819549E-02 kcal/mol
+     max. AE         9.894780166E-01 kcal/mol
+
+       x[bohr]       y[bohr]       z[bohr]          q[e]
+     0.4180631     1.0280421    -0.4148031    -0.1384558
+    -0.4552817     1.0268481    -0.4510163    -0.2053023
+    -0.0333721     1.5391674    -0.9120222     0.4568928
+

@@ -1,0 +1,58 @@
+Running in fitting mode
+
+Reading "/home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube"...
+
+  job Potential
+  Electrostatic potential from Total SCF Density
+    3   -4.970736   -4.970736   -4.746947
+   40    0.249999    0.000000    0.000000
+   40    0.000000    0.249999    0.000000
+   40    0.000000    0.000000    0.249999
+    8    8.000000    0.000000    0.000000    0.223789
+    1    1.000000    0.000000    1.435292   -0.895158
+    1    1.000000    0.000000   -1.435292   -0.895158
+  9.33696E-04  6.32747E-05 -8.20507E-04 -1.70423E-03 -2.57447E-03 -3.41834E-03
+       .            .            .            .            .            .
+       .            .            .            .            .            .
+       .            .            .            .            .            .
+ -8.27319E-05 -9.59561E-04 -1.82824E-03 -2.67583E-03 -3.49031E-03 -4.26103E-03
+
+41856 out of 64000 gridpoints are considered ( 65.4%).
+
+...done!
+
+
+
+
+USING GREEDY MODE
+Running DE in parallel with 1 thread(s)!
+
+Starting fitting procedure for multipole expansion of atom 1 with 3 charges, trial 1
+gen      0/6000      elitist  3.1357189E-03 feasible? T
+gen    100/6000      elitist  1.2434104E-03 feasible? T
+gen    200/6000      elitist  1.1413328E-03 feasible? T
+gen    300/6000      elitist  1.0630057E-03 feasible? T
+gen    400/6000      elitist  1.0619264E-03 feasible? T
+gen    500/6000      elitist  1.0604774E-03 feasible? T
+gen    600/6000      elitist  1.0603582E-03 feasible? T
+population converged towards a single solution after 641 generations.
+Starting local simplex optimization:
+Solution before refinement:      1.0603551522E-03
+ performing expansion, best =    1.0603549686877662E-003
+ performing expansion, best =    1.0603548938776619E-003
+ performing expansion, best =    1.0603548934561573E-003
+Exiting simplex optimization after   282 iterations
+Solution after  refinement:      1.0603548935E-03
+RMSE         1.060354893E-03Hartree
+NEW BEST!
+
+Best found solution for 3 charges:
+        RMSE         6.653822388E-01 kcal/mol
+         MAE         4.458003239E-01 kcal/mol
+     max. AE         5.012649628E+00 kcal/mol
+
+       x[bohr]       y[bohr]       z[bohr]          q[e]
+    -0.6048321    -0.5734107     0.6950739    -0.4296667
+     0.2539901    -0.7986292     0.5858472     0.9999826
+     0.5848664    -0.6184972     0.6621086    -0.8917625
+

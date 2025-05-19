@@ -1,0 +1,15 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: pc-mm025
+Building DAG of jobs...
+IncompleteFilesException:
+The files below seem to be incomplete. If you are sure that certain files are not incomplete, mark them as complete with
+
+    snakemake --cleanup-metadata <filenames>
+
+To re-generate the files rerun your command with the --rerun-incomplete flag.
+Incomplete files:
+/home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_9charges.log
+/home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_10charges.log
+/home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_11charges.log
+/home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_12charges.log

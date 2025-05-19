@@ -1,0 +1,6 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: pc-mm025
+Building DAG of jobs...
+IOFileException in file "/home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/Snakefile", line 87:
+bad character in group name 'wildcards.atom_num' at position 80 in wildcard statement

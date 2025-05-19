@@ -1,0 +1,68 @@
+Running in fitting mode
+
+Reading "/home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube"...
+
+  job Potential
+  Electrostatic potential from Total SCF Density
+    3   -4.970736   -4.970736   -4.746947
+   40    0.249999    0.000000    0.000000
+   40    0.000000    0.249999    0.000000
+   40    0.000000    0.000000    0.249999
+    8    8.000000    0.000000    0.000000    0.223789
+    1    1.000000    0.000000    1.435292   -0.895158
+    1    1.000000    0.000000   -1.435292   -0.895158
+ -3.70954E-03 -1.67749E-03 -3.19220E-03 -4.74008E-03 -1.17129E-03 -2.61854E-03
+       .            .            .            .            .            .
+       .            .            .            .            .            .
+       .            .            .            .            .            .
+ -3.95028E-03 -5.24364E-03  1.72499E-03  5.68478E-04 -6.37135E-04 -1.87084E-03
+
+17333 out of 64000 gridpoints are considered ( 27.1%).
+
+...done!
+
+
+
+
+USING GREEDY MODE
+Running DE in parallel with 1 thread(s)!
+
+Starting fitting procedure for multipole expansion of atom 2 with 4 charges, trial 1
+gen      0/8000      elitist  5.0662374E-03 feasible? T
+gen    100/8000      elitist  4.4607908E-04 feasible? T
+gen    200/8000      elitist  2.3965193E-04 feasible? T
+gen    300/8000      elitist  1.9294941E-04 feasible? T
+gen    400/8000      elitist  1.7165080E-04 feasible? T
+gen    500/8000      elitist  1.7063948E-04 feasible? T
+gen    600/8000      elitist  1.6937956E-04 feasible? T
+gen    700/8000      elitist  1.6893610E-04 feasible? T
+gen    800/8000      elitist  1.6866275E-04 feasible? T
+gen    900/8000      elitist  1.6687688E-04 feasible? T
+gen   1000/8000      elitist  1.6381114E-04 feasible? T
+gen   1100/8000      elitist  1.6371811E-04 feasible? T
+gen   1200/8000      elitist  1.6356044E-04 feasible? T
+gen   1300/8000      elitist  1.6334404E-04 feasible? T
+gen   1400/8000      elitist  1.6313244E-04 feasible? T
+gen   1500/8000      elitist  1.6283800E-04 feasible? T
+gen   1600/8000      elitist  1.6274279E-04 feasible? T
+population converged towards a single solution after 1644 generations.
+Starting local simplex optimization:
+Solution before refinement:      1.6273775959E-04
+ performing expansion, best =    1.6273679548183106E-004
+ performing expansion, best =    1.6273645109123592E-004
+Exiting simplex optimization after   383 iterations
+Solution after  refinement:      1.6273645109E-04
+RMSE         1.627364511E-04Hartree
+NEW BEST!
+
+Best found solution for 4 charges:
+        RMSE         1.021185877E-01 kcal/mol
+         MAE         6.806912849E-02 kcal/mol
+     max. AE         8.331467060E-01 kcal/mol
+
+       x[bohr]       y[bohr]       z[bohr]          q[e]
+     0.2075507     1.7451778    -1.0349588     0.1991955
+    -0.6175255     1.1022680    -0.6139373    -0.9205493
+    -0.5363741     1.1818132    -0.6858501     0.9999089
+     0.3187394     0.9999405    -0.3657774    -0.1654204
+

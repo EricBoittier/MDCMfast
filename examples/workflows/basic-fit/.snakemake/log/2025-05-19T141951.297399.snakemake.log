@@ -1,0 +1,245 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: pc-mm025
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                      count
+---------------------  -------
+all                          1
+fit_molecular_mdcm           7
+generate_charmm_files        7
+total                       15
+
+Select jobs to execute...
+Execute 7 jobs...
+[Mon May 19 14:19:51 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole1_1charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole2_2charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_3charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_10charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_10charges.log
+    jobid: 19
+    reason: Missing output files: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_10charges.xyz
+    wildcards: n_charges=10
+    resources: tmpdir=/tmp
+
+[Mon May 19 14:19:51 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole1_1charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole2_2charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_3charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_8charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_8charges.log
+    jobid: 15
+    reason: Missing output files: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_8charges.xyz
+    wildcards: n_charges=8
+    resources: tmpdir=/tmp
+
+[Mon May 19 14:19:51 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole1_1charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole2_2charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_3charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_6charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_6charges.log
+    jobid: 11
+    reason: Missing output files: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_6charges.xyz
+    wildcards: n_charges=6
+    resources: tmpdir=/tmp
+
+[Mon May 19 14:19:51 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole1_1charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole2_2charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_3charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_4charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_4charges.log
+    jobid: 2
+    reason: Missing output files: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_4charges.xyz
+    wildcards: n_charges=4
+    resources: tmpdir=/tmp
+
+[Mon May 19 14:19:51 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole1_1charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole2_2charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_3charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_7charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_7charges.log
+    jobid: 13
+    reason: Missing output files: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_7charges.xyz
+    wildcards: n_charges=7
+    resources: tmpdir=/tmp
+
+[Mon May 19 14:19:51 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole1_1charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole2_2charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_3charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_5charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_5charges.log
+    jobid: 9
+    reason: Missing output files: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_5charges.xyz
+    wildcards: n_charges=5
+    resources: tmpdir=/tmp
+
+[Mon May 19 14:19:51 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole1_1charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole2_2charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_3charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_9charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_9charges.log
+    jobid: 17
+    reason: Missing output files: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_9charges.xyz
+    wildcards: n_charges=9
+    resources: tmpdir=/tmp
+
+Terminating processes on user request, this might take some time.
+RuleException:
+CalledProcessError in file "/home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/Snakefile", line 128:
+Command 'set -euo pipefail;  
+        mkdir -p $(dirname /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_10charges.xyz)
+        
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/pcubefit.x -greedy -esp /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube                    -mtpfile /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat -ncmin 10                    -ncmax 10 -nacmax 4                    -ntry 3 -v > /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_10charges.log
+
+        cp 10charges.xyz /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_10charges.xyz' died with <Signals.SIGINT: 2>.
+[Mon May 19 14:22:29 2025]
+Error in rule fit_molecular_mdcm:
+    message: None
+    jobid: 19
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole1_1charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole2_2charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_3charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_10charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_10charges.log
+    shell:
+        
+        mkdir -p $(dirname /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_10charges.xyz)
+        
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/pcubefit.x -greedy -esp /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube                    -mtpfile /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat -ncmin 10                    -ncmax 10 -nacmax 4                    -ntry 3 -v > /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_10charges.log
+
+        cp 10charges.xyz /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_10charges.xyz
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/Snakefile", line 128:
+Command 'set -euo pipefail;  
+        mkdir -p $(dirname /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_7charges.xyz)
+        
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/pcubefit.x -greedy -esp /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube                    -mtpfile /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat -ncmin 7                    -ncmax 7 -nacmax 4                    -ntry 3 -v > /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_7charges.log
+
+        cp 7charges.xyz /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_7charges.xyz' died with <Signals.SIGINT: 2>.
+[Mon May 19 14:22:29 2025]
+Error in rule fit_molecular_mdcm:
+    message: None
+    jobid: 13
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole1_1charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole2_2charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_3charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_7charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_7charges.log
+    shell:
+        
+        mkdir -p $(dirname /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_7charges.xyz)
+        
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/pcubefit.x -greedy -esp /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube                    -mtpfile /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat -ncmin 7                    -ncmax 7 -nacmax 4                    -ntry 3 -v > /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_7charges.log
+
+        cp 7charges.xyz /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_7charges.xyz
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/Snakefile", line 128:
+Command 'set -euo pipefail;  
+        mkdir -p $(dirname /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_4charges.xyz)
+        
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/pcubefit.x -greedy -esp /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube                    -mtpfile /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat -ncmin 4                    -ncmax 4 -nacmax 4                    -ntry 3 -v > /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_4charges.log
+
+        cp 4charges.xyz /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_4charges.xyz' died with <Signals.SIGINT: 2>.
+[Mon May 19 14:22:29 2025]
+Error in rule fit_molecular_mdcm:
+    message: None
+    jobid: 2
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole1_1charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole2_2charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_3charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_4charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_4charges.log
+    shell:
+        
+        mkdir -p $(dirname /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_4charges.xyz)
+        
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/pcubefit.x -greedy -esp /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube                    -mtpfile /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat -ncmin 4                    -ncmax 4 -nacmax 4                    -ntry 3 -v > /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_4charges.log
+
+        cp 4charges.xyz /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_4charges.xyz
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/Snakefile", line 128:
+Command 'set -euo pipefail;  
+        mkdir -p $(dirname /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_9charges.xyz)
+        
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/pcubefit.x -greedy -esp /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube                    -mtpfile /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat -ncmin 9                    -ncmax 9 -nacmax 4                    -ntry 3 -v > /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_9charges.log
+
+        cp 9charges.xyz /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_9charges.xyz' died with <Signals.SIGINT: 2>.
+[Mon May 19 14:22:29 2025]
+Error in rule fit_molecular_mdcm:
+    message: None
+    jobid: 17
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole1_1charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole2_2charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_3charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_9charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_9charges.log
+    shell:
+        
+        mkdir -p $(dirname /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_9charges.xyz)
+        
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/pcubefit.x -greedy -esp /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube                    -mtpfile /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat -ncmin 9                    -ncmax 9 -nacmax 4                    -ntry 3 -v > /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_9charges.log
+
+        cp 9charges.xyz /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_9charges.xyz
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/Snakefile", line 128:
+Command 'set -euo pipefail;  
+        mkdir -p $(dirname /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_6charges.xyz)
+        
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/pcubefit.x -greedy -esp /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube                    -mtpfile /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat -ncmin 6                    -ncmax 6 -nacmax 4                    -ntry 3 -v > /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_6charges.log
+
+        cp 6charges.xyz /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_6charges.xyz' died with <Signals.SIGINT: 2>.
+[Mon May 19 14:22:29 2025]
+Error in rule fit_molecular_mdcm:
+    message: None
+    jobid: 11
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole1_1charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole2_2charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_3charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_6charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_6charges.log
+    shell:
+        
+        mkdir -p $(dirname /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_6charges.xyz)
+        
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/pcubefit.x -greedy -esp /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube                    -mtpfile /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat -ncmin 6                    -ncmax 6 -nacmax 4                    -ntry 3 -v > /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_6charges.log
+
+        cp 6charges.xyz /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_6charges.xyz
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/Snakefile", line 128:
+Command 'set -euo pipefail;  
+        mkdir -p $(dirname /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_8charges.xyz)
+        
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/pcubefit.x -greedy -esp /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube                    -mtpfile /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat -ncmin 8                    -ncmax 8 -nacmax 4                    -ntry 3 -v > /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_8charges.log
+
+        cp 8charges.xyz /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_8charges.xyz' died with <Signals.SIGINT: 2>.
+[Mon May 19 14:22:29 2025]
+Error in rule fit_molecular_mdcm:
+    message: None
+    jobid: 15
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole1_1charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole2_2charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_3charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_8charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_8charges.log
+    shell:
+        
+        mkdir -p $(dirname /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_8charges.xyz)
+        
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/pcubefit.x -greedy -esp /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube                    -mtpfile /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat -ncmin 8                    -ncmax 8 -nacmax 4                    -ntry 3 -v > /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_8charges.log
+
+        cp 8charges.xyz /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_8charges.xyz
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/Snakefile", line 128:
+Command 'set -euo pipefail;  
+        mkdir -p $(dirname /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_5charges.xyz)
+        
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/pcubefit.x -greedy -esp /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube                    -mtpfile /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat -ncmin 5                    -ncmax 5 -nacmax 4                    -ntry 3 -v > /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_5charges.log
+
+        cp 5charges.xyz /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_5charges.xyz' died with <Signals.SIGINT: 2>.
+[Mon May 19 14:22:29 2025]
+Error in rule fit_molecular_mdcm:
+    message: None
+    jobid: 9
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole1_1charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole2_2charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_3charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_5charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_5charges.log
+    shell:
+        
+        mkdir -p $(dirname /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_5charges.xyz)
+        
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/pcubefit.x -greedy -esp /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube                    -mtpfile /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat -ncmin 5                    -ncmax 5 -nacmax 4                    -ntry 3 -v > /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_5charges.log
+
+        cp 5charges.xyz /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_5charges.xyz
+        
+        (command exited with non-zero exit code)
+Complete log(s): /home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/.snakemake/log/2025-05-19T141951.297399.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

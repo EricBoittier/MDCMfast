@@ -1,0 +1,120 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: pc-mm025
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                      count
+---------------------  -------
+all                          1
+fit_molecular_mdcm          10
+generate_charmm_files       10
+refine_model                10
+total                       31
+
+Select jobs to execute...
+Execute 10 jobs...
+[Mon May 19 14:36:26 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole1_1charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole2_2charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_3charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_5charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_5charges.log
+    jobid: 14
+    reason: Missing output files: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_5charges.log, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_5charges.xyz
+    wildcards: n_charges=5
+    resources: tmpdir=/tmp
+
+[Mon May 19 14:36:26 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole1_1charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole2_2charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_3charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_11charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_11charges.log
+    jobid: 32
+    reason: Missing output files: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_11charges.log, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_11charges.xyz
+    wildcards: n_charges=11
+    resources: tmpdir=/tmp
+
+[Mon May 19 14:36:26 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole1_1charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole2_2charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_3charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_12charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_12charges.log
+    jobid: 35
+    reason: Missing output files: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_12charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_12charges.log
+    wildcards: n_charges=12
+    resources: tmpdir=/tmp
+
+[Mon May 19 14:36:26 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole1_1charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole2_2charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_3charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_9charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_9charges.log
+    jobid: 26
+    reason: Missing output files: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_9charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_9charges.log
+    wildcards: n_charges=9
+    resources: tmpdir=/tmp
+
+[Mon May 19 14:36:26 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole1_1charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole2_2charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_3charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_6charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_6charges.log
+    jobid: 17
+    reason: Missing output files: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_6charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_6charges.log
+    wildcards: n_charges=6
+    resources: tmpdir=/tmp
+
+[Mon May 19 14:36:26 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole1_1charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole2_2charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_3charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_3charges.log
+    jobid: 3
+    reason: Missing output files: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_3charges.log, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_3charges.xyz
+    wildcards: n_charges=3
+    resources: tmpdir=/tmp
+
+[Mon May 19 14:36:26 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole1_1charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole2_2charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_3charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_10charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_10charges.log
+    jobid: 29
+    reason: Missing output files: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_10charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_10charges.log
+    wildcards: n_charges=10
+    resources: tmpdir=/tmp
+
+[Mon May 19 14:36:26 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole1_1charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole2_2charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_3charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_7charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_7charges.log
+    jobid: 20
+    reason: Missing output files: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_7charges.log, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_7charges.xyz
+    wildcards: n_charges=7
+    resources: tmpdir=/tmp
+
+[Mon May 19 14:36:26 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole1_1charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole2_2charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_3charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_4charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_4charges.log
+    jobid: 11
+    reason: Missing output files: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_4charges.log, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_4charges.xyz
+    wildcards: n_charges=4
+    resources: tmpdir=/tmp
+
+[Mon May 19 14:36:26 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot_culled.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens_culled.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole1_1charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole2_2charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole3_3charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_8charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_8charges.log
+    jobid: 23
+    reason: Missing output files: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_8charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_8charges.log
+    wildcards: n_charges=8
+    resources: tmpdir=/tmp
+
+[Mon May 19 14:36:38 2025]
+Finished jobid: 3 (Rule: fit_molecular_mdcm)
+1 of 31 steps (3%) done
+Select jobs to execute...
+Execute 1 jobs...
+RuleException in rule refine_model in file "/home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/Snakefile", line 139:
+AttributeError: 'InputFiles' object has no attribute 'mtpl', when formatting the following:
+
+        mkdir -p $(dirname {output.xyz})
+        {PCUBEFIT} -xyz {input.xyz} -mtpfile {input.mtpl}                    -simplex -esp {input.pot_cube} -dens {input.dens_cube}                    -nacmax {params.max_atom_charges} -ntry {params.ntry} -v > {output.log}
+        cp {wildcards.n_charges}charges_refined.xyz {output.xyz}
+        

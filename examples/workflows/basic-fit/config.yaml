@@ -8,8 +8,8 @@ lmax: 5
 qtot: 0.0
 
 # Fitting parameters
-ntry: 3  # Number of tries per fit
-n_fits: 6  # Number of separate fits
+ntry: 1  # Number of tries per fit
+n_fits: 1  # Number of separate fits
 max_charges_per_atom: 4
-min_molecular_charges: 4
-max_molecular_charges: 10 
+min_molecular_charges: 3
+max_molecular_charges: 12 

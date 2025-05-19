@@ -1,0 +1,69 @@
+Running in fitting mode
+
+Reading "/home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube"...
+
+  job Potential
+  Electrostatic potential from Total SCF Density
+    3   -4.970736   -4.970736   -4.746947
+   40    0.249999    0.000000    0.000000
+   40    0.000000    0.249999    0.000000
+   40    0.000000    0.000000    0.249999
+    8    8.000000    0.000000    0.000000    0.223789
+    1    1.000000    0.000000    1.435292   -0.895158
+    1    1.000000    0.000000   -1.435292   -0.895158
+ -2.15651E-03 -3.58463E-03 -1.29295E-03 -2.75658E-03 -4.25481E-03 -5.75774E-03
+       .            .            .            .            .            .
+       .            .            .            .            .            .
+       .            .            .            .            .            .
+ -1.52019E-03 -3.34123E-03 -5.23754E-03 -7.16881E-03 -9.09012E-03 -1.09546E-02
+
+17803 out of 64000 gridpoints are considered ( 27.8%).
+
+...done!
+
+
+
+
+USING GREEDY MODE
+Running DE in parallel with 1 thread(s)!
+
+Starting fitting procedure for multipole expansion of atom 3 with 4 charges, trial 1
+gen      0/8000      elitist  1.0973157E-03 feasible? T
+gen    100/8000      elitist  3.4868492E-04 feasible? T
+gen    200/8000      elitist  2.4125597E-04 feasible? T
+gen    300/8000      elitist  2.2516493E-04 feasible? T
+gen    400/8000      elitist  2.1791407E-04 feasible? T
+gen    500/8000      elitist  2.1687750E-04 feasible? T
+gen    600/8000      elitist  2.1623495E-04 feasible? T
+gen    700/8000      elitist  2.0568135E-04 feasible? T
+gen    800/8000      elitist  2.0126162E-04 feasible? T
+gen    900/8000      elitist  1.9923954E-04 feasible? T
+gen   1000/8000      elitist  1.9660402E-04 feasible? T
+gen   1100/8000      elitist  1.9545909E-04 feasible? T
+gen   1200/8000      elitist  1.9528097E-04 feasible? T
+population converged towards a single solution after 1281 generations.
+Starting local simplex optimization:
+Solution before refinement:      1.9523996102E-04
+ performing expansion, best =    1.9523384144159205E-004
+ performing expansion, best =    1.9523293230698085E-004
+ performing expansion, best =    1.9523119532955407E-004
+ performing expansion, best =    1.9523031064446587E-004
+ performing expansion, best =    1.9522995835338149E-004
+ performing expansion, best =    1.9522925755397787E-004
+ performing expansion, best =    1.9522922114870872E-004
+Exiting simplex optimization after   384 iterations
+Solution after  refinement:      1.9522922115E-04
+RMSE         1.952292211E-04Hartree
+NEW BEST!
+
+Best found solution for 4 charges:
+        RMSE         1.225080933E-01 kcal/mol
+         MAE         7.704314017E-02 kcal/mol
+     max. AE         1.486758122E+00 kcal/mol
+
+       x[bohr]       y[bohr]       z[bohr]          q[e]
+    -0.4632064    -1.1005139    -0.4004524    -0.7882122
+    -0.3438479    -1.1461655    -0.4830298     0.9949455
+     0.4868434    -1.2155477    -0.3603072    -0.1006588
+     0.1362902    -2.0271833    -1.2641387     0.1022374
+
