@@ -1,0 +1,119 @@
+from pathlib import Path
+
+# Configuration
+configfile: "config.yaml"
+
+# Default target rule
+rule all:
+    input:
+        "results/charmm/{model}.dcm"
+
+# 1. Fit atomic multipoles to reference ESP
+rule fit_multipoles:
+    input:
+        pot_cube = config["ref_dir"] + "/{name}-pot.cube",
+        dens_cube = config["ref_dir"] + "/{name}-dens.cube"
+    output:
+        mtpl = "results/1-mtp-fit/fitted-mtpl.dat"
+    params:
+        lmax = config["lmax"],
+        qtot = config["qtot"]
+    shell:
+        """
+        mtpfit.py -pot {input.pot_cube} -dens {input.dens_cube} \
+                  -lmax {params.lmax} -qtot {params.qtot}
+        """
+
+# 2. Generate and analyze cube file from fitted multipoles
+rule analyze_multipoles:
+    input:
+        pot_cube = config["ref_dir"] + "/{name}-pot.cube",
+        dens_cube = config["ref_dir"] + "/{name}-dens.cube",
+        mtpl = "results/1-mtp-fit/fitted-mtpl.dat"
+    output:
+        cube = "results/1-mtp-fit/ditriantapole_expansion.cube",
+        log = "results/1-mtp-fit/analyze-cube-l{lmax}.log"
+    shell:
+        """
+        # Generate cube from fitted multipoles
+        pcubefit.x -v -generate -multipole -esp {input.pot_cube} \
+                  -dens {input.dens_cube} -mtpfile {input.mtpl}
+        
+        # Analyze fit quality
+        pcubefit.x -v -analysis -esp {input.pot_cube} \
+                  -esp2 {output.cube} -dens {input.dens_cube} > {output.log}
+        """
+
+# 3. Fit atomic MDCM models
+rule fit_atomic_mdcm:
+    input:
+        pot_cube = config["ref_dir"] + "/{name}-pot.cube",
+        dens_cube = config["ref_dir"] + "/{name}-dens.cube",
+        mtpl = "results/1-mtp-fit/fitted-mtpl.dat"
+    output:
+        xyz = "results/2-fit-atoms/fit{fit_num}/atom{atom_num}.xyz",
+        log = "results/2-fit-atoms/fit{fit_num}/atom{atom_num}-fit.out"
+    params:
+        max_charges = config["max_charges_per_atom"],
+        ntry = config["ntry"]
+    shell:
+        """
+        pcubefit.x -greedy -mtpfile {input.mtpl} \
+                   -esp {input.pot_cube} -dens {input.dens_cube} \
+                   -nacmin 1 -nacmax {params.max_charges} \
+                   -atom {wildcards.atom_num} -ntry {params.ntry} \
+                   -onlymultipoles -v > {output.log}
+        """
+
+# 4. Fit molecular MDCM model
+rule fit_molecular_mdcm:
+    input:
+        pot_cube = config["ref_dir"] + "/{name}-pot.cube",
+        dens_cube = config["ref_dir"] + "/{name}-dens.cube",
+        mtpl = "results/1-mtp-fit/fitted-mtpl.dat",
+        atom_fits = expand("results/2-fit-atoms/fit{{fit_num}}/atom{atom_num}.xyz",
+                         atom_num=range(1, config["n_atoms"] + 1))
+    output:
+        xyz = "results/3-fit-molecule/fit{fit_num}/{n_charges}charges.xyz",
+        log = "results/3-fit-molecule/fit{fit_num}/{n_charges}charges.out"
+    params:
+        ntry = config["ntry"],
+        max_atom_charges = config["max_charges_per_atom"]
+    shell:
+        """
+        pcubefit.x -greedy -esp {input.pot_cube} -dens {input.dens_cube} \
+                   -mtpfile {input.mtpl} -ncmin {wildcards.n_charges} \
+                   -ncmax {wildcards.n_charges} -nacmax {params.max_atom_charges} \
+                   -ntry {params.ntry} -v > {output.log}
+        """
+
+# 5. Analyze final model
+rule analyze_model:
+    input:
+        xyz = "results/3-fit-molecule/fit{fit_num}/{model}.xyz",
+        pot_cube = config["ref_dir"] + "/{name}-pot.cube",
+        dens_cube = config["ref_dir"] + "/{name}-dens.cube"
+    output:
+        cube = "results/4-analysis/{model}.cube",
+        log = "results/4-analysis/analyze-cube-{model}.log"
+    shell:
+        """
+        # Generate cube from charge model
+        pcubefit.x -generate -xyz {input.xyz} -esp {input.pot_cube} \
+                   -dens {input.dens_cube} -v
+        
+        # Analyze against reference
+        pcubefit.x -v -analysis -esp {input.pot_cube} \
+                   -esp2 {output.cube} -dens {input.dens_cube} > {output.log}
+        """
+
+# 6. Generate CHARMM files
+rule generate_charmm_files:
+    input:
+        xyz = "results/3-fit-molecule/fit{fit_num}/{model}.xyz",
+        dens_cube = config["ref_dir"] + "/{name}-dens.cube",
+        frames = "frames.txt"
+    output:
+        dcm = "results/charmm/{model}.dcm"
+    shell:
+        "comb-xyz-to-dcm.pl {input.xyz} {input.dens_cube} {input.frames} {output.dcm}" 

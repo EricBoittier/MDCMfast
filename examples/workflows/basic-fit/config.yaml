@@ -1,0 +1,15 @@
+# Input/Output
+ref_dir: "../ref"
+name: "h2o"  # Base name for input files
+
+# Molecule parameters
+n_atoms: 3
+lmax: 5
+qtot: 0.0
+
+# Fitting parameters
+ntry: 3  # Number of tries per fit
+n_fits: 6  # Number of separate fits
+max_charges_per_atom: 4
+min_molecular_charges: 4
+max_molecular_charges: 10 

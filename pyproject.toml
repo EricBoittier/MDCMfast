@@ -16,7 +16,28 @@ dependencies = [
     "numpy",
     "scipy",
     "pandas",
+    "ase",
+    "jax",
+    "jaxlib",
+    "flax",
+    "optax",
+    "tqdm",
+    "matplotlib",
+    "e3x",
+    "patchworklib",
+    "networkx",
+    "rdkit",
+    "jupyter",
+    "ipykernel",
+    "snakemake",
+    "papermill[all]",
+    "polars",
+    "pandas",
+    "dcmnet @ git+https://github.com/EricBoittier/dcmnet.git",
 ]
+
+[tool.hatch.metadata]
+allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/mdcmfast"]
