@@ -1,0 +1,14 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: pc-mm025
+Building DAG of jobs...
+MissingInputException in rule all in file "/home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/Snakefile", line 24:
+Missing input files for rule all:
+    affected files:
+        /home/boittier/Documents/github/MDCMfast/results/charmm/h2o_10charges.dcm
+        /home/boittier/Documents/github/MDCMfast/results/charmm/h2o_5charges.dcm
+        /home/boittier/Documents/github/MDCMfast/results/charmm/h2o_4charges.dcm
+        /home/boittier/Documents/github/MDCMfast/results/charmm/h2o_6charges.dcm
+        /home/boittier/Documents/github/MDCMfast/results/charmm/h2o_7charges.dcm
+        /home/boittier/Documents/github/MDCMfast/results/charmm/h2o_9charges.dcm
+        /home/boittier/Documents/github/MDCMfast/results/charmm/h2o_8charges.dcm

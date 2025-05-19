@@ -1,0 +1,11 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: pc-mm025
+Building DAG of jobs...
+InputFunctionException in rule fit_atomic_mdcm in file "/home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/Snakefile", line 73:
+Error:
+  AttributeError: 'Wildcards' object has no attribute 'atom_num'
+Wildcards:
+
+Traceback:
+  File "/home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/Snakefile", line 84, in <lambda> (rule fit_atomic_mdcm, line 124, /home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/Snakefile)

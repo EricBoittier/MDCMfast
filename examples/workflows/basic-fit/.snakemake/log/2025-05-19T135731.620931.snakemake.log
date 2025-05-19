@@ -1,0 +1,64 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: pc-mm025
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                      count
+---------------------  -------
+all                          1
+fit_atomic_mdcm              1
+fit_molecular_mdcm           7
+generate_charmm_files        7
+total                       16
+
+Select jobs to execute...
+Execute 1 jobs...
+[Mon May 19 13:57:31 2025]
+localrule fit_atomic_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_range(1, 4)_range(1, 4).xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_range(1, 4)_range(1, 4)-fit.log
+    jobid: 4
+    reason: Missing output files: /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_range(1, 4)_range(1, 4).xyz; Code has changed since last execution
+    wildcards: atom_num=range(1, 4)
+    resources: tmpdir=/tmp
+
+RuleException:
+CalledProcessError in file "/home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/Snakefile", line 85:
+Command 'set -euo pipefail;  
+        mkdir -p $(dirname /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_range(1, 4)_range(1, 4).xyz)
+        
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/pcubefit.x -greedy -mtpfile /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat                    -esp /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube                    -nacmin 1 -nacmax 4                    -atom range(1, 4) -ntry 3                    -onlymultipoles -v > /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_range(1, 4)_range(1, 4)-fit.log' returned non-zero exit status 2.
+[Mon May 19 13:57:31 2025]
+Error in rule fit_atomic_mdcm:
+    message: None
+    jobid: 4
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_range(1, 4)_range(1, 4).xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_range(1, 4)_range(1, 4)-fit.log
+    shell:
+        
+        mkdir -p $(dirname /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_range(1, 4)_range(1, 4).xyz)
+        
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/pcubefit.x -greedy -mtpfile /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat                    -esp /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube                    -nacmin 1 -nacmax 4                    -atom range(1, 4) -ntry 3                    -onlymultipoles -v > /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_range(1, 4)_range(1, 4)-fit.log
+        
+        (command exited with non-zero exit code)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Mon May 19 13:57:31 2025]
+Error in rule fit_atomic_mdcm:
+    message: None
+    jobid: 4
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_range(1, 4)_range(1, 4).xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_range(1, 4)_range(1, 4)-fit.log
+    shell:
+        
+        mkdir -p $(dirname /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_range(1, 4)_range(1, 4).xyz)
+        
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/pcubefit.x -greedy -mtpfile /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat                    -esp /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube                    -nacmin 1 -nacmax 4                    -atom range(1, 4) -ntry 3                    -onlymultipoles -v > /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_range(1, 4)_range(1, 4)-fit.log
+        
+        (command exited with non-zero exit code)
+Complete log(s): /home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/.snakemake/log/2025-05-19T135731.620931.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

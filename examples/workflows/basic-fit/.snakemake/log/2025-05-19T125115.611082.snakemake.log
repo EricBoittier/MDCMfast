@@ -1,0 +1,12 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: pc-mm025
+Building DAG of jobs...
+MissingInputException in rule fit_molecular_mdcm in file "/home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/Snakefile", line 97:
+Missing input files for rule fit_molecular_mdcm:
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/4charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/4charges.log
+    wildcards: n_charges=4
+    affected files:
+        /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/atom3.xyz
+        /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/atom1.xyz
+        /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/atom2.xyz

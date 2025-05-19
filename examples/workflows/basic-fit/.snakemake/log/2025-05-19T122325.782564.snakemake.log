@@ -1,0 +1,48 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: pc-mm025
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                      count
+---------------------  -------
+all                          1
+fit_atomic_mdcm              3
+fit_molecular_mdcm           7
+fit_multipoles               1
+generate_charmm_files        7
+total                       19
+
+Select jobs to execute...
+Execute 1 jobs...
+[Mon May 19 12:23:25 2025]
+localrule fit_multipoles:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat
+    jobid: 3
+    reason: Missing output files: /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat
+    resources: tmpdir=/tmp
+
+Waiting at most 5 seconds for missing files:
+/home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat (missing locally)
+MissingOutputException in rule fit_multipoles in file "/home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/Snakefile", line 34:
+Job 3  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+/home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat (missing locally, parent dir contents: )
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Mon May 19 12:23:33 2025]
+Error in rule fit_multipoles:
+    message: None
+    jobid: 3
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat
+    shell:
+        
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/mtpfit.py -pot /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube                   -lmax 5 -qtot 0.0
+        
+        (command exited with non-zero exit code)
+Complete log(s): /home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/.snakemake/log/2025-05-19T122325.782564.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

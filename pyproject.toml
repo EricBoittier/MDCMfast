@@ -33,6 +33,9 @@ dependencies = [
     "papermill[all]",
     "polars",
     "pandas",
+    "meson",
+    "ninja",
+    "jinja2",
     "dcmnet @ git+https://github.com/EricBoittier/dcmnet.git",
 ]
 

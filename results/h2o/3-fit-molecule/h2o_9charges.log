@@ -1,0 +1,43 @@
+Running in fitting mode
+
+Reading "/home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube"...
+
+  job Potential
+  Electrostatic potential from Total SCF Density
+    3   -4.970736   -4.970736   -4.746947
+   40    0.249999    0.000000    0.000000
+   40    0.000000    0.249999    0.000000
+   40    0.000000    0.000000    0.249999
+    8    8.000000    0.000000    0.000000    0.223789
+    1    1.000000    0.000000    1.435292   -0.895158
+    1    1.000000    0.000000   -1.435292   -0.895158
+  9.33696E-04  6.32747E-05 -8.20507E-04 -1.70423E-03 -2.57447E-03 -3.41834E-03
+       .            .            .            .            .            .
+       .            .            .            .            .            .
+       .            .            .            .            .            .
+ -8.27319E-05 -9.59561E-04 -1.82824E-03 -2.67583E-03 -3.49031E-03 -4.26103E-03
+
+42464 out of 64000 gridpoints are considered ( 66.3%).
+
+...done!
+
+
+
+
+USING GREEDY MODE
+File "multipole1_1charges.xyz" already exists. Fitting procedure is skipped.
+File "multipole1_2charges.xyz" already exists. Fitting procedure is skipped.
+File "multipole1_3charges.xyz" already exists. Fitting procedure is skipped.
+File "multipole1_4charges.xyz" already exists. Fitting procedure is skipped.
+File "multipole2_1charges.xyz" already exists. Fitting procedure is skipped.
+File "multipole2_2charges.xyz" already exists. Fitting procedure is skipped.
+File "multipole2_3charges.xyz" already exists. Fitting procedure is skipped.
+File "multipole2_4charges.xyz" already exists. Fitting procedure is skipped.
+File "multipole3_1charges.xyz" already exists. Fitting procedure is skipped.
+File "multipole3_2charges.xyz" already exists. Fitting procedure is skipped.
+File "multipole3_3charges.xyz" already exists. Fitting procedure is skipped.
+File "multipole3_4charges.xyz" already exists. Fitting procedure is skipped.
+Running DE in parallel with 1 thread(s)!
+
+Starting fitting procedure for 9 charges, trial 1
+gen      0/18000      elitist  1.9323893E-03 feasible? T

@@ -1,0 +1,170 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: pc-mm025
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                      count
+---------------------  -------
+all                          1
+fit_atomic_mdcm              3
+fit_molecular_mdcm           7
+generate_charmm_files        7
+total                       18
+
+Select jobs to execute...
+Execute 3 jobs...
+[Mon May 19 13:52:38 2025]
+localrule fit_atomic_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom1.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom1-fit.log
+    jobid: 4
+    reason: Missing output files: /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom1.xyz; Code has changed since last execution; Params have changed since last execution: Union of exclusive params before and now across all output: before: <nothing exclusive> now: 'h2o' 
+    wildcards: atom_num=1
+    resources: tmpdir=/tmp
+
+[Mon May 19 13:52:38 2025]
+localrule fit_atomic_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom2.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom2-fit.log
+    jobid: 5
+    reason: Missing output files: /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom2.xyz; Code has changed since last execution; Params have changed since last execution: Union of exclusive params before and now across all output: before: <nothing exclusive> now: 'h2o' 
+    wildcards: atom_num=2
+    resources: tmpdir=/tmp
+
+[Mon May 19 13:52:38 2025]
+localrule fit_atomic_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom3.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom3-fit.log
+    jobid: 6
+    reason: Missing output files: /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom3.xyz; Code has changed since last execution; Params have changed since last execution: Union of exclusive params before and now across all output: before: <nothing exclusive> now: 'h2o' 
+    wildcards: atom_num=3
+    resources: tmpdir=/tmp
+
+RuleException:
+CalledProcessError in file "/home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/Snakefile", line 86:
+Command 'set -euo pipefail;  
+        echo h2o
+        echo 1
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/pcubefit.x -greedy -mtpfile /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat                    -esp /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube                    -nacmin 1 -nacmax 4                    -atom {wildcards.atom_num} -ntry 3                    -onlymultipoles -v > /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom1-fit.log
+
+        mv *xyz /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/' returned non-zero exit status 2.
+[Mon May 19 13:52:38 2025]
+Error in rule fit_atomic_mdcm:
+    message: None
+    jobid: 4
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom1.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom1-fit.log
+    shell:
+        
+        echo h2o
+        echo 1
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/pcubefit.x -greedy -mtpfile /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat                    -esp /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube                    -nacmin 1 -nacmax 4                    -atom {wildcards.atom_num} -ntry 3                    -onlymultipoles -v > /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom1-fit.log
+
+        mv *xyz /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/Snakefile", line 86:
+Command 'set -euo pipefail;  
+        echo h2o
+        echo 2
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/pcubefit.x -greedy -mtpfile /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat                    -esp /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube                    -nacmin 1 -nacmax 4                    -atom {wildcards.atom_num} -ntry 3                    -onlymultipoles -v > /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom2-fit.log
+
+        mv *xyz /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/' returned non-zero exit status 2.
+[Mon May 19 13:52:38 2025]
+Error in rule fit_atomic_mdcm:
+    message: None
+    jobid: 5
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom2.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom2-fit.log
+    shell:
+        
+        echo h2o
+        echo 2
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/pcubefit.x -greedy -mtpfile /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat                    -esp /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube                    -nacmin 1 -nacmax 4                    -atom {wildcards.atom_num} -ntry 3                    -onlymultipoles -v > /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom2-fit.log
+
+        mv *xyz /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/Snakefile", line 86:
+Command 'set -euo pipefail;  
+        echo h2o
+        echo 3
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/pcubefit.x -greedy -mtpfile /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat                    -esp /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube                    -nacmin 1 -nacmax 4                    -atom {wildcards.atom_num} -ntry 3                    -onlymultipoles -v > /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom3-fit.log
+
+        mv *xyz /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/' returned non-zero exit status 2.
+[Mon May 19 13:52:38 2025]
+Error in rule fit_atomic_mdcm:
+    message: None
+    jobid: 6
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom3.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom3-fit.log
+    shell:
+        
+        echo h2o
+        echo 3
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/pcubefit.x -greedy -mtpfile /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat                    -esp /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube                    -nacmin 1 -nacmax 4                    -atom {wildcards.atom_num} -ntry 3                    -onlymultipoles -v > /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom3-fit.log
+
+        mv *xyz /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/
+        
+        (command exited with non-zero exit code)
+Removing output files of failed job fit_atomic_mdcm since they might be corrupted:
+/home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom1-fit.log
+Removing output files of failed job fit_atomic_mdcm since they might be corrupted:
+/home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom2-fit.log
+Removing output files of failed job fit_atomic_mdcm since they might be corrupted:
+/home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom3-fit.log
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Mon May 19 13:52:38 2025]
+Error in rule fit_atomic_mdcm:
+    message: None
+    jobid: 4
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom1.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom1-fit.log
+    shell:
+        
+        echo h2o
+        echo 1
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/pcubefit.x -greedy -mtpfile /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat                    -esp /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube                    -nacmin 1 -nacmax 4                    -atom {wildcards.atom_num} -ntry 3                    -onlymultipoles -v > /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom1-fit.log
+
+        mv *xyz /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/
+        
+        (command exited with non-zero exit code)
+[Mon May 19 13:52:38 2025]
+Error in rule fit_atomic_mdcm:
+    message: None
+    jobid: 5
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom2.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom2-fit.log
+    shell:
+        
+        echo h2o
+        echo 2
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/pcubefit.x -greedy -mtpfile /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat                    -esp /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube                    -nacmin 1 -nacmax 4                    -atom {wildcards.atom_num} -ntry 3                    -onlymultipoles -v > /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom2-fit.log
+
+        mv *xyz /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/
+        
+        (command exited with non-zero exit code)
+[Mon May 19 13:52:38 2025]
+Error in rule fit_atomic_mdcm:
+    message: None
+    jobid: 6
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom3.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom3-fit.log
+    shell:
+        
+        echo h2o
+        echo 3
+        /home/boittier/Documents/github/MDCMfast/src/mdcmfast/bin/pcubefit.x -greedy -mtpfile /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat                    -esp /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube -dens /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube                    -nacmin 1 -nacmax 4                    -atom {wildcards.atom_num} -ntry 3                    -onlymultipoles -v > /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/h2o_atom3-fit.log
+
+        mv *xyz /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/
+        
+        (command exited with non-zero exit code)
+Complete log(s): /home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/.snakemake/log/2025-05-19T135238.179988.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

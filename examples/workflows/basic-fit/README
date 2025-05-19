@@ -1,0 +1,8 @@
+run with 
+
+```
+bash setup.sh
+snakemake -j 10
+```
+
+

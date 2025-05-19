@@ -1,0 +1,26 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: pc-mm025
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                      count
+---------------------  -------
+all                          1
+fit_atomic_mdcm              3
+fit_molecular_mdcm           7
+fit_multipoles               1
+generate_charmm_files        7
+total                       19
+
+Select jobs to execute...
+Execute 1 jobs...
+RuleException in rule fit_multipoles in file "/home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/Snakefile", line 34:
+NameError: The name "'name'" is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}, when formatting the following:
+
+        {MTPFIT} -pot {input.pot_cube} -dens {input.dens_cube}                   -lmax {params.lmax} -qtot {params.qtot}
+        echo "Fitted multipoles saved to {output.mtpl}"
+        cp {output.mtpl} {INSTALL_DIR}/results/{config['name']}/1-mtp-fit/fitted-mtpl.dat
+        

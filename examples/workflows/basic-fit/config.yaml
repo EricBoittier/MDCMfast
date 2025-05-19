@@ -1,5 +1,5 @@
 # Input/Output
-ref_dir: "../ref"
+ref_dir: "/home/boittier/Documents/github/MDCMfast/examples/ref"
 name: "h2o"  # Base name for input files
 
 # Molecule parameters

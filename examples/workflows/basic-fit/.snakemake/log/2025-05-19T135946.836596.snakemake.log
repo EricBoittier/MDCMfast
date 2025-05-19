@@ -1,0 +1,51 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: pc-mm025
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                      count
+---------------------  -------
+all                          1
+fit_atomic_mdcm              3
+fit_molecular_mdcm           7
+generate_charmm_files        7
+total                       18
+
+Select jobs to execute...
+Execute 3 jobs...
+[Mon May 19 13:59:46 2025]
+localrule fit_atomic_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_3_3.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_3_3-fit.log
+    jobid: 6
+    reason: Missing output files: /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_3_3.xyz
+    wildcards: atom_num=3
+    resources: tmpdir=/tmp
+
+[Mon May 19 13:59:46 2025]
+localrule fit_atomic_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_1_1.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_1_1-fit.log
+    jobid: 4
+    reason: Missing output files: /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_1_1.xyz
+    wildcards: atom_num=1
+    resources: tmpdir=/tmp
+
+[Mon May 19 13:59:46 2025]
+localrule fit_atomic_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_2_2.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_2_2-fit.log
+    jobid: 5
+    reason: Missing output files: /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_2_2.xyz
+    wildcards: atom_num=2
+    resources: tmpdir=/tmp
+
+Waiting at most 600 seconds for missing files:
+/home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_3_3.xyz (missing locally)
+Terminating processes on user request, this might take some time.
+Complete log(s): /home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/.snakemake/log/2025-05-19T135946.836596.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

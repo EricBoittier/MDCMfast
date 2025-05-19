@@ -1,0 +1,25 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: pc-mm025
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                      count
+---------------------  -------
+all                          1
+fit_atomic_mdcm              3
+fit_molecular_mdcm           7
+generate_charmm_files        7
+total                       18
+
+Select jobs to execute...
+Execute 3 jobs...
+RuleException in rule fit_atomic_mdcm in file "/home/boittier/Documents/github/MDCMfast/examples/workflows/basic-fit/Snakefile", line 73:
+NameError: The name "'name'" is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}, when formatting the following:
+
+        {PCUBEFIT} -greedy -mtpfile {input.mtpl}                    -esp {input.pot_cube} -dens {input.dens_cube}                    -nacmin 1 -nacmax {params.max_charges}                    -atom {params.atom_num} -ntry {params.ntry}                    -onlymultipoles -v > {output.log}
+
+        cp *xyz *log {INSTALL_DIR}/results/{config['name']}/2-fit-atoms/
+        
