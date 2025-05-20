@@ -1,0 +1,107 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: pc-mm025
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count
+------------------  -------
+all                       1
+fit_molecular_mdcm       10
+refine_model             10
+total                    21
+
+Select jobs to execute...
+Execute 10 jobs...
+[Tue May 20 09:28:43 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom1_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom1_4charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom2_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom2_4charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom3_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom3_4charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_3charges.log
+    jobid: 2
+    reason: Code has changed since last execution; Params have changed since last execution: Union of exclusive params before and now across all output: before: <nothing exclusive> now: 3 
+    wildcards: n_charges_model=3
+    resources: tmpdir=/tmp
+
+[Tue May 20 09:28:43 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom1_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom1_4charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom2_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom2_4charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom3_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom3_4charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_4charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_4charges.log
+    jobid: 12
+    reason: Code has changed since last execution; Params have changed since last execution: Union of exclusive params before and now across all output: before: <nothing exclusive> now: 3 
+    wildcards: n_charges_model=4
+    resources: tmpdir=/tmp
+
+[Tue May 20 09:28:43 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom1_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom1_4charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom2_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom2_4charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom3_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom3_4charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_5charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_5charges.log
+    jobid: 14
+    reason: Code has changed since last execution; Params have changed since last execution: Union of exclusive params before and now across all output: before: <nothing exclusive> now: 3 
+    wildcards: n_charges_model=5
+    resources: tmpdir=/tmp
+
+[Tue May 20 09:28:43 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom1_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom1_4charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom2_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom2_4charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom3_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom3_4charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_6charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_6charges.log
+    jobid: 16
+    reason: Forced execution
+    wildcards: n_charges_model=6
+    resources: tmpdir=/tmp
+
+[Tue May 20 09:28:43 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom1_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom1_4charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom2_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom2_4charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom3_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom3_4charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_7charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_7charges.log
+    jobid: 18
+    reason: Forced execution
+    wildcards: n_charges_model=7
+    resources: tmpdir=/tmp
+
+[Tue May 20 09:28:43 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom1_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom1_4charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom2_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom2_4charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom3_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom3_4charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_8charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_8charges.log
+    jobid: 20
+    reason: Forced execution
+    wildcards: n_charges_model=8
+    resources: tmpdir=/tmp
+
+[Tue May 20 09:28:43 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom1_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom1_4charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom2_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom2_4charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom3_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom3_4charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_9charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_9charges.log
+    jobid: 22
+    reason: Forced execution
+    wildcards: n_charges_model=9
+    resources: tmpdir=/tmp
+
+[Tue May 20 09:28:43 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom1_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom1_4charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom2_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom2_4charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom3_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom3_4charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_10charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_10charges.log
+    jobid: 24
+    reason: Forced execution
+    wildcards: n_charges_model=10
+    resources: tmpdir=/tmp
+
+[Tue May 20 09:28:43 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom1_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom1_4charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom2_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom2_4charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom3_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom3_4charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_11charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_11charges.log
+    jobid: 26
+    reason: Forced execution
+    wildcards: n_charges_model=11
+    resources: tmpdir=/tmp
+
+[Tue May 20 09:28:43 2025]
+localrule fit_molecular_mdcm:
+    input: /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-pot.cube, /home/boittier/Documents/github/MDCMfast/examples/ref/h2o-dens.cube, /home/boittier/Documents/github/MDCMfast/results/h2o/1-mtp-fit/fitted-mtpl.dat, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom1_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom1_4charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom2_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom2_4charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom3_3charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/2-fit-atoms/multipole_atom3_4charges.xyz
+    output: /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_12charges.xyz, /home/boittier/Documents/github/MDCMfast/results/h2o/3-fit-molecule/h2o_12charges.log
+    jobid: 28
+    reason: Forced execution
+    wildcards: n_charges_model=12
+    resources: tmpdir=/tmp
+

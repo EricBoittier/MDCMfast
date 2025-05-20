@@ -128,13 +128,14 @@ rule fit_molecular_mdcm:
         log = f"{INSTALL_DIR}/results/{config['name']}/3-fit-molecule/{config['name']}_{{n_charges_model}}charges.log"
     params:
         ntry = config["ntry"],
-        nacmax = config["max_charges_per_atom"]
+        nacmax = config["max_charges_per_atom"],
+        n_atoms = config["n_atoms"]
     shell:
         """
         mkdir -p $(dirname "{output.xyz}")
         
         {PCUBEFIT} -greedy -esp {input.pot_cube} -dens {input.dens_cube} \
-                   -mtpfile {input.mtpl} -ncmin {wildcards.n_charges_model} \
+                   -mtpfile {input.mtpl} -ncmin {params.n_atoms} \
                    -ncmax {wildcards.n_charges_model} -nacmax {params.nacmax} \
                    -ntry {params.ntry} -v > {output.log}
 
